@@ -36,7 +36,7 @@ export class UpdateFormComponent {
     else {
       this.poductsService.updateProduct(this.productToUpdate!)
       .subscribe(() => {
-        this.router.navigate([''])
+        this.router.navigate(['list'])
       })
     }
   }

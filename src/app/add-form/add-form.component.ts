@@ -31,7 +31,7 @@ export class AddFormComponent {
     else {
       this.poductsService.addProduct(this.productToAdd!)
       .subscribe(() => {
-        this.router.navigate([''])
+        this.router.navigate(['list'])
       })
     }
   }

@@ -9,6 +9,8 @@ import { DetailsCardComponent } from './details-card/details-card.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateFormComponent } from './update-form/update-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { UpdateFormComponent } from './update-form/update-form.component';
     ProductsListComponent,
     DetailsCardComponent,
     AddFormComponent,
-    UpdateFormComponent
+    UpdateFormComponent,
+    LoginFormComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,

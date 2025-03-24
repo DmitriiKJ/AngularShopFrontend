@@ -4,12 +4,17 @@ import { ProductsListComponent } from './products-list/products-list.component';
 import { DetailsCardComponent } from './details-card/details-card.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { UpdateFormComponent } from './update-form/update-form.component';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { authGuard } from './auth.guard';
+import { RegisterFormComponent } from './register-form/register-form.component';
 
 const routes: Routes = [
-  {path: '', component: ProductsListComponent},
-  {path: 'details/:id', component: DetailsCardComponent},
-  {path: 'add', component: AddFormComponent},
-  {path: 'update/:id', component: UpdateFormComponent}
+  {path: '', component: LoginFormComponent},
+  {path: 'register', component: RegisterFormComponent},
+  {path: 'list', component: ProductsListComponent, canActivate: [authGuard]},
+  {path: 'details/:id', component: DetailsCardComponent, canActivate: [authGuard]},
+  {path: 'add', component: AddFormComponent, canActivate: [authGuard]},
+  {path: 'update/:id', component: UpdateFormComponent, canActivate: [authGuard]}
 ];
 
 @NgModule({

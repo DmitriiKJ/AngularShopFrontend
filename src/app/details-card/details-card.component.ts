@@ -25,7 +25,7 @@ export class DetailsCardComponent {
 
   toList(event: Event) {
     event.preventDefault()
-    this.router.navigate([''])
+    this.router.navigate(['list'])
   }
 
 }

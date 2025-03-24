@@ -13,7 +13,7 @@ export class ProductsListComponent {
   productsService = inject(ProductsService)
   router = inject(Router)
 
-  products: Product[] = []
+  products: Product[] | null = []
 
   constructor() {
     this.loadProducts()
@@ -37,7 +37,7 @@ export class ProductsListComponent {
   loadProducts() {
     this.productsService.getAllProducts()
     .subscribe(val => {
-      this.products = val
+      this.products = val.body
     })
   }
 
