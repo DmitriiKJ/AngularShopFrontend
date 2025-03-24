@@ -1,0 +1,23 @@
+<form (submit)="toList($event)">
+  <div>
+    <label>Id: </label>
+    <input type="text" disabled [value]="product.id">
+  </div>
+  <div>
+    <label>Name: </label>
+    <input type="text" disabled [value]="product.name">
+  </div>
+  <div>
+    <label>Description: </label>
+    <textarea readonly aria-multiline="true">{{product.description}}</textarea>
+  </div>
+  <div>
+    <label>Price: </label>
+    <input type="text" disabled [value]="product.price">
+  </div>
+  <div>
+    <label>Stock: </label>
+    <input type="text" disabled [value]="product.stock">
+  </div>
+  <button>To list</button>
+</form>

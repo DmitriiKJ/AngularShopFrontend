@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+/* Global dark theme styles with higher contrast */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #181818;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+th {
+  background: #444;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background: #222;
+}
+
+tr:hover {
+  background: #383838;
+}
+
+td {
+  border-bottom: 1px solid #555;
+}
+
+button {
+  border-radius: 8px;
+  min-width: 120px;
+  width: auto;
+  height: 40px;
+  margin: 5px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: transform 0.2s ease-in-out, background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+button:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.3);
+}
+
+.danger {
+  background: linear-gradient(135deg, #ff4444, #cc0000);
+}
+
+.warning {
+  background: linear-gradient(135deg, #ffbb33, #ff8800);
+}
+
+.accept {
+  background: linear-gradient(135deg, #44c767, #2e8b57);
+}
+
+.info {
+  background: linear-gradient(135deg, #3399ff, #0066cc);
+}

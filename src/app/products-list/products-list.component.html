@@ -1,0 +1,35 @@
+<div class="list">
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Details</th>
+      <th>Update</th>
+      <th>Delete</th>
+  </tr>
+  <tbody>
+    @for (product of products; track product.id){
+      <tr>
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.description }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.stock }}</td>
+        <td>
+            <button class="info" (click)="details(product.id)">Details</button>
+        </td>
+        <td>
+          <button class="warning" (click)="updateProduct(product.id)">Update</button>
+        </td>
+        <td>
+          <button class="danger" (click)="deleteProduct(product.id)">Delete</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+  </table>
+  <button class="accept" (click)="toAddProduct()">Add new product</button>
+</div>
